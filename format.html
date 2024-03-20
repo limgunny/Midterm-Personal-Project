@@ -54,6 +54,13 @@
             <p>포장 상태</p>
             <label><input type="radio" name="gift">선물포장</label>
             <label><input type="radio"name="gift">선물포장 안함</label><!--name 값을 같게 해야 선택 중복이 불가하게 만들 수 있음-->
-         </fieldset>
-</body>
+            <label>상품 수량</label>
+            <input type="number" min="0" max="3">
+            <input type="range" min="0" max="10" value="1" step="1">
+        </fieldset>
+       
+         <input type="datetime-local" name="time">
+        <input type="submit" name="제출하기">
+        <input type="reset" name="초기화">
+    </body> 
 </html>
