@@ -24,16 +24,36 @@
             <li>
               <a href='/format.html'>Form</a>
             </li>
+            <li>
+                <a href='/videos.html'>Videos</a>
+              </li>
           </ul>
         </div>
       </nav>
-    <form>
+    
         <form>
-            <label for="fname">성:</label><br>
+            <label for="fname">first name:</label><br>
             <input type="text" id="fname" name="fname"><br>
-            <label for="lname">이름:</label><br>
+            <label for="lname">last name:</label><br>
             <input type="text" id="lname" name="lname">
           </form>
-      </form>    
+         <label for="pass">Password</label>
+         <input type="password" name="pass"><br>
+         <label for="search">search</label> 
+         <input type="search" name="search"><br>
+         <label for="url">url</label>
+         <input type="url" name="url"><br>
+         <label for="pass">e-mail</label>
+         <input type="email" name="email"><br>
+         <fieldset>
+            <legend>상품선택</legend>
+            <label><input type="checkbox">선물용 3kg</label>
+            <label><input type="checkbox">선물용 5kg</label>
+            <label><input type="checkbox">가정용 3kg</label>
+            <label><input type="checkbox">가정용 5kg</label>
+            <p>포장 상태</p>
+            <label><input type="radio" name="gift">선물포장</label>
+            <label><input type="radio"name="gift">선물포장 안함</label><!--name 값을 같게 해야 선택 중복이 불가하게 만들 수 있음-->
+         </fieldset>
 </body>
 </html>
