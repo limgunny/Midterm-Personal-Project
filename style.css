@@ -22,7 +22,7 @@
   }
   
   .main {
-    color: blue;
+    color: black;
     line-height: 2.5;
   }
   
@@ -88,4 +88,21 @@
 }
 .table{             #테이블 추가해서
   
+}
+
+video {
+  width: 500px;
+  height: 400px;
+  position: relative;
+  top: 10px;
+  left: 30px;
+  
+}
+
+img {
+  width: 700px;
+  height: 600px;
+  position: relative;
+  top: 10px;
+  left: 20px;
 }
