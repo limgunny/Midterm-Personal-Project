@@ -7,26 +7,20 @@ function lightblue(){
     document.body.style.backgroundColor='lightblue'
 }
 function yellow(){
-    document.body.style.backgroundColor='yellow'
+    document.body.style.backgroundColor='#F8FFA2'
 }
 function reset(){
-    document.body.style.backgroundColor='linen'
+    document.body.style.backgroundColor='white'
 }
 
 function showhtml(){
-    document.getElementById('fig').src ='img/html.png'
+    document.getElementById('fig').src ='img/zzanggu.gif'
     document.getElementById('desc').innerHTML=
-    '<b>CSS3</b>는 HTML 문서의 스타일을 지정하기 위한 언어이다.'
+    '<b>짱구테마</b> 입니다.'
 }
 
 function showcss(){
-    document.getElementById('fig').src ='img/css.png'
+    document.getElementById('fig').src ='img/gif2.gif'
     document.getElementById('desc').innerHTML=
-    '<b>CSS3</b>는 HTML 문서의 스타일을 지정하기 위한 언어이다.'
-}
-
-function showjs(){
-    document.getElementById('fig').src ='img/javascript.png'
-    document.getElementById('desc').innerHTML=
-    '<b>Javascript</b>는 웹을 위한 프로그래밍 언어이며 웹문서에서 동작을 실행할 수 있게 한다. '
+    '<b>삐앙이테마</b> 입니다.'
 }

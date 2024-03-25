@@ -3,10 +3,88 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>포트폴리오</title>
     <link rel="stylesheet" href="style.css" />
-</head>
+    <style type="text/css">
+      #t1, div {
+        border: 1px solid black;
+      }
+      </style>
+      <script>
+        let cnt = 1;
+        function a() {
+          let writer = f.writer.value;
+          let pwd = f.pwd.value;
+          let content = f.content.value;
+          let el = mkDiv(writer, pwd, content);
+          let list = document.getElementById("list");
+          list.appendChild(el);
+          f.writer.value = "";
+          f.pwd.value = "";
+          f.content.value = "";
+        }
+        function mkDiv(writer, pwd, content) {
+          let newDiv = document.createElement("div");//새 div태그 생성  <div id="d_1" pwd='111'>
+          newDiv.id = "d_" + cnt;//생성한 div에 id 지정. d_cnt
+          newDiv.pwd = pwd;
+          let html = ""; //생성된 div에 출력될 내용
+          html += "writer:<span id='w_"+cnt+"'>" + writer + "</span><br/>";
+          html += "content:<span id='c_"+cnt+"'>" + content + "</span><br/>";
+          html += "<input type='button' value='수정' onclick=editForm(" + cnt
+              + ")>"; //editForm(2)
+          html += "<input type='button' value='삭제' onclick=del(" + cnt + ")>";
+          newDiv.innerHTML = html;
+          cnt++;
+          return newDiv;
+        }
+        function editForm(cnt) {
+          let editDiv = document.getElementById("d_" + cnt); //수정할 글의 div
+          let editForm = document.getElementById("editf");
+          editDiv.appendChild(editForm);
+          let writer = document.getElementById("w_" + cnt).innerHTML;
+          let content = document.getElementById("c_" + cnt).innerHTML;
+          document.getElementById("editwriter").value = writer;
+          document.getElementById("editcontent").value = content;
+          document.getElementById("editbtn").cnt = cnt;//버튼에 cnt속성을 추가해서, 수정 글번호를 저장
+          editForm.style.display = '';
+        }
+        function cancel() {
+          let editForm = document.getElementById("editf");
+          editForm.style.display = 'none';
+          document.getElementsByTagName("body")[0].appendChild(editForm);
+      
+        }
+        function edit() {
+          let cnt = document.getElementById("editbtn").cnt;
+          let editDiv = document.getElementById("d_" + cnt);
+          let pwd2 = document.getElementById("editpwd").value;//수정폼에 입력한 글 비밀번호
+          if (editDiv.pwd != pwd2) {
+            alert("글 비밀번호 불일치. 수정불가");
+          } else {
+            let newWriter = document.getElementById("editwriter").value;
+            let newContent = document.getElementById("editcontent").value;
+            document.getElementById("w_" + cnt).innerHTML = newWriter;
+            document.getElementById("c_" + cnt).innerHTML = newContent;
+          }
+          document.getElementById("editwriter").value = "";
+          document.getElementById("editcontent").value = "";
+          document.getElementById("editpwd").value = "";
+          cancel();
+        }
+        function del(cnt) {
+          let pwd = prompt("글 비밀번호");
+          let delDiv = document.getElementById("d_" + cnt);
+          if (pwd == delDiv.pwd) {
+            document.getElementById("list").removeChild(delDiv);
+          }else{
+            alert("글 비밀번호 불일치. 삭제취소");
+          }
+        }
+      </script>
+      
+  </head>
 <body>
+  
     <!-- 메뉴 -->
    <nav class="navbar">
     <div class="container">
@@ -30,40 +108,70 @@
       </ul>
     </div>
   </nav>
-    
-        <form>
-            <label for="fname">first name:</label><br>
-            <input type="text" id="fname" name="fname"><br>
-            <label for="lname">last name:</label><br>
-            <input type="text" id="lname" name="lname">
-          </form>
-         <label for="pass">Password</label>
-         <input type="password" name="pass" autofocus placeholder="패스워드를 입력해주세요"><br>
-         <label for="search">search</label> 
-         <input type="search" name="search"><br>
-         <label for="url">url</label>
-         <input type="url" name="url"><br>
-         <label for="pass">e-mail</label>
-         <input type="email" name="email"><br>
-         <fieldset>
-            <legend>상품선택</legend>
-            <label><input type="checkbox">선물용 3kg</label>
-            <label><input type="checkbox">선물용 5kg</label>
-            <label><input type="checkbox">가정용 3kg</label>
-            <label><input type="checkbox">가정용 5kg</label>
-            <p>포장 상태</p>
-            <label><input type="radio" name="gift">선물포장</label>
-            <label><input type="radio"name="gift">선물포장 안함</label><!--name 값을 같게 해야 선택 중복이 불가하게 만들 수 있음-->
-            <label>상품 수량</label>
-            <input type="number" min="0" max="3">
-            <input type="range" min="0" max="10" value="1" step="1">
-        </fieldset>
-       
-         <input type="datetime-local" name="time">
-        <input type="submit" name="제출하기">
-        <input type="reset" name="초기화">
-        <input type="file">
-        <input type="hidden" name="비밀정보" value="비밀정보 보냅니다 (화면에 표시되지 않음)">
-        <input type="button" value="버튼테스트">
+
+
+  <fieldset>
+    <legend>학년선택</legend>
+    <label><input type="checkbox"> 1학년</label>
+    <label><input type="checkbox"> 2학년</label>
+    <label><input type="checkbox"> 3학년</label>
+    <label><input type="checkbox"> 3학년</label>
+    <p>작성자</p>
+    <label><input type="radio" name="gift">작성자</label>
+    <label><input type="radio"name="gift">익명</label><!--name 값을 같게 해야 선택 중복이 불가하게 만들 수 있음-->
+</fieldset>
+
+
+ <input type="datetime-local" name="time">
+<input type="file">
+<input type="hidden" name="비밀정보" value="비밀정보 보냅니다 (화면에 표시되지 않음)">
+  
+<!--방명록-->
+  <h3>방명록</h3>
+	<form name="f">
+		<table id="t1">
+			<tr>
+				<th>작성자</th>
+				<td><input type="text" name="writer" id="writer"></td>
+			</tr>
+			<tr>
+				<th>글 비밀번호</th>
+				<td><input type="password" name="pwd" id="pwd"></td>
+			</tr>
+			<tr>
+				<th>내용</th>
+				<td><input type="text" name="content" id="content"></td>
+			</tr>
+			<tr>
+				<th>작성</th>
+				<td><input type="button" value="작성" onclick="a()"></td>
+			</tr>
+		</table>
+	</form>
+	<div id="list"></div>
+	<!-- 수정폼 -->
+	<table id="editf" style="display: none;">
+		<tr>
+			<th>작성자</th>
+			<td><input type="text" name="editwriter" id="editwriter"></td>
+		</tr>
+		<tr>
+			<th>글 비밀번호</th>
+			<td><input type="password" name="editpwd" id="editpwd"></td>
+		</tr>
+		<tr>
+			<th>내용</th>
+			<td><input type="text" name="editcontent" id="editcontent"></td>
+		</tr>
+		<tr>
+			<th>수정완료</th>
+			<td><input type="button" value="수정완료" id="editbtn"
+				onclick="edit()"> <input type="button" value="취소"
+				onclick="cancel()"></td>
+		</tr>
+	</table>
+</body>
+</html>
+<!--방명록 종료-->
     </body> 
 </html>

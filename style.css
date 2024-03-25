@@ -8,7 +8,7 @@
     font-size: 16px;
     line-height: 1.5;
     color: #333;
-    background: linen;
+    background: white;
   }
   
   ul {
@@ -91,10 +91,10 @@
 }
 
 video {
-  width: 500px;
-  height: 400px;
+  width: 600px;
+  height:500px;
   position: relative;
-  top: 10px;
+  top: -100px;
   left: 30px;
   
 }
