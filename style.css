@@ -4,11 +4,7 @@
     margin: 0;
   }
   
-  @media (max-width: 768px) {
-    body {
-        font-size: 16px;
-    }
-}
+
 
   .fire{
 width: 2rem;
@@ -64,6 +60,8 @@ margin-top: auto;
   }
   
   .navbar ul li {
+    display: flex;
+    flex-direction: row;
     margin-left: 20px;
   }
   
