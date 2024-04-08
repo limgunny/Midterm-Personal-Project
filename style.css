@@ -4,6 +4,13 @@
     margin: 0;
   }
   
+  .fire{
+width: 2rem;
+height: 2rem;
+margin-left: auto;
+margin-top: auto;
+  }
+
   body {
     font-size: 16px;
     line-height: 1.5;
@@ -83,12 +90,13 @@
   }
 
 .photo{
-    height: 60px;
-    margin-left: auto;
+  width: 600;  
+  height: 500px;
+  position: relative;
+  top: 10px;
+  left: 20px;
 }
-.table{             #테이블 추가해서
-  
-}
+
 
 video {
   width: 600px;
@@ -100,8 +108,8 @@ video {
 }
 
 img {
-  width: 700px;
-  height: 600px;
+  width: 400px;
+  height: 500px;
   position: relative;
   top: 10px;
   left: 20px;
