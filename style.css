@@ -16,6 +16,11 @@ margin-top: auto;
     line-height: 1.5;
     color: #333;
     background: white;
+    background-image : url('/img/kitty4.png');
+   background-size : 200px 200px;
+   background-repeat //we will play with values here 
+   height : 100vh;
+   background-attachment: fixed;
   }
   
   ul {
