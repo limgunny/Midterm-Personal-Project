@@ -7,7 +7,7 @@
     <link rel="stylesheet" href="style.css" />
     <style type="text/css">
       #t1, div {
-        border: 1px solid black;
+        border: 0px solid black;
       }
       </style>
       <script>
@@ -119,24 +119,26 @@
      </div>
    </nav>
     <!--메인 섹션-->
-  <fieldset style="margin-left: 40%; margin-right: 35%;">
+    <h1 style="text-align: center; margin-top: 5%;">학년선택</h1><br>
+  <fieldset style="text-align: center; margin-left: 40%; margin-right: 35%;"><br>
     <legend style="text-align: center;">학년선택</legend>
     <label><input type="checkbox"> 1학년</label>
     <label><input type="checkbox"> 2학년</label>
     <label><input type="checkbox"> 3학년</label>
     <label><input type="checkbox"> 3학년</label>
-    <p>작성자</p>
+    <p><br>작성자</p><br>
     <label><input type="radio" name="gift">작성자</label>
     <label><input type="radio"name="gift">익명</label><!--name 값을 같게 해야 선택 중복이 불가하게 만들 수 있음-->
 </fieldset>
 
 
- <input style="margin-left:40%;" type="datetime-local" name="time">
+<br><input style="margin-left:40%;" type="datetime-local" name="time">
 <input type="file">
 <input type="hidden" name="비밀정보" value="비밀정보 보냅니다 (화면에 표시되지 않음)">
   
 <!--방명록-->
-  <h3 style="margin-left: 40%;">방명록</h3>
+<h1 style="text-align: center; margin-top: 0%;"><br>방명록</h1>
+
 	<form name="f">
 		<table style="margin-left: 40%;" id="t1">
 			<tr>
@@ -178,7 +180,7 @@
 				onclick="edit()"> <input type="button" value="취소"
 				onclick="cancel()"></td>
 		</tr>
-	</table>
+	</table><br><br><br><br>
 </body>
 </html>
 <!--방명록 종료-->
