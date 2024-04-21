@@ -5,6 +5,11 @@
   }
   
 
+  @media screen and (min-width: 600px) {
+    .container {
+        margin: 1em 2em;
+    }
+}
 
   .fire{
 width: 2rem;
