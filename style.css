@@ -5,16 +5,11 @@
   }
   
 
-  @media screen and (min-width: 600px) {
-    .container {
-        margin: 1em 2em;
-    }
-}
 
   .fire{
 width: 2rem;
 height: 2rem;
-margin-left: auto;
+margin-left: -20%;
 margin-top: auto;
   }
 
@@ -28,14 +23,8 @@ margin-top: auto;
    
      }
 
-#showcase{
-  
-    min-height: 300px;
-    background: url('../img/showcase.jpg') no-repeat 0 -400px;
-    text-align: center;
-    color: white;
-  
-}
+
+
 
   body .background-image{
     position: absolute;
@@ -65,12 +54,63 @@ margin-top: auto;
   }
   
   .navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 8px 12px;
+
     background-color: black;
     color: #fff;
     height: 60px;
     border-bottom: lightskyblue 3px solid;
   }
   
+  
+  .nav-logo {
+    font-size: 24px;
+    color: white;
+}
+
+.nav-menu {
+    list-style: none;
+    display: flex;
+    margin: 0;
+    padding: 0;
+}
+
+.nav-menu li {
+    padding: 8px 12px;
+}
+
+.nav-menu li:hover {
+    background-color: #555;
+    border-radius: 4px;
+}
+
+.nav-menu li a {
+    text-decoration: none;
+    color: white;
+}
+
+/* 모바일 화면에서 네비게이션 바 토글 버튼 스타일 */
+.navbar-toggleBtn {
+    display: none;
+    color: white;
+    position: absolute;
+    right: 32px;
+    font-size: 24px;
+}
+
+@media only screen and (max-width: 768px) {
+    /* 모바일 화면에서 스타일 변경 */
+    .container {
+        width: 90%;
+    }
+
+    .navbar-toggleBtn {
+        display: block;
+    }
+}
   .navbar .container {
     display: flex;
     flex-direction: row;
@@ -90,7 +130,7 @@ margin-top: auto;
     margin-left: 20px;
   }
   
-  .navbar .logo {
+  .navbar .nav-logo {
     font-size: x-large;
     font-weight: bold;
   }
