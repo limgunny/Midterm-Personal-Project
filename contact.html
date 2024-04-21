@@ -1,33 +1,50 @@
+<!--표만들기 contact.html에 추가
+#이미지도 추가할거 추가하기, pdf 파일 및 오디오와 비디오 파일도 삽입 가능 왠만하면 메인페이지 말고 컨택트나 서브페이지에https://www.w3schools.com/ 여기에 소스코드 많음 유튜브링크를 통해 비디오 삽입하는 법 참고:https://www.w3schools.com/html/html_youtube.asp ,하이퍼링크, target-->
+<!--폼태그 https://www.w3schools.com/html/html_forms.asp 또는 ppt 35p 참고-->
 <!DOCTYPE html>
 <html lang="en">
- <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>포트폴리오</title>
-    <link rel="stylesheet" href="style.css" />
-</head>
-  <body>
-    <html lang="en">
   <head>
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>포트폴리오</title>
     <link rel="stylesheet" href="style.css" />
+    <style>
+       /* For mobile phones: */
+        [class*="col-"] {
+          width: 100%;
+        }
+        
+        @media only screen and (min-width: 768px) {
+          /* For desktop: */
+          .col-1 {width: 8.33%;}
+          .col-2 {width: 16.66%;}
+          .col-3 {width: 25%;}
+          .col-4 {width: 33.33%;}
+          .col-5 {width: 41.66%;}
+          .col-6 {width: 50%;}
+          .col-7 {width: 58.33%;}
+          .col-8 {width: 66.66%;}
+          .col-9 {width: 75%;}
+          .col-10 {width: 83.33%;}
+          .col-11 {width: 91.66%;}
+          .col-12 {width: 100%;}
+        }
+    </style>
   </head>
   <body>
    <!-- 메뉴 -->
+   <div class="background-image">
    <nav class="navbar">
     <div class="container">
       
-      <div class="logo"><img class="fire" src="img/fire.gif"><a href='/'>\t Portfolio</a></div>
+      <div style="margin-left:-25px;" class="logo"><img class="fire" src="img/fire.gif"><a style="margin-left: 15px;" href='/'> Portfolio</a></div>
       <ul class="nav">
         <li>
           <a href='/'>Home</a>
         </li>
         <li>
-          <a href='/about.html'>About</a>
+          <a href='/about.html'>Team</a>
         </li>
         <li>
           <a href='/contact.html'>Contact</a>
@@ -39,7 +56,13 @@
             <a href='/videos.html'>Videos</a>
           </li>
           <li>
-            <a href='/loading.html'>점검중</a>
+            <a href='/utilize.html'>Utilize</a>
+         </li>
+          <li>
+            <a href='/secon.html'>SECON</a>
+          </li>
+          <li>
+            <a style="font-size: x-small;" href='/signup.html'>회원가입</a>
           </li>
       </ul>
     </div>
@@ -53,12 +76,12 @@
         <p>이름 : 임건희</p> <hr>
         <p>전화번호 : 010-3210-4297</p><hr>
         <p>이메일 : asdasd123@naver.com</p><hr>
-        <p>홈페이지 : <a href="https://imgunny.netlify.app/">imgunny.netlify.app</anetlify.app</p><hr>
+        <p>홈페이지 : <a href="https://imgunny.netlify.app/">imgunny.netlify.app</a>netlify.app</p><hr>
         
       </div>
     </section>
-  <!--
-    <table>
+  
+    <table style="margin-left: 40%;border-collapse: collapse; width: 100%; border: 1px solid #ddd; padding: 8px; text-align: left;">
     <caption>선물용과 가정용 상품 구성</caption>
     <tr>
       <th>용도</th>
@@ -72,7 +95,7 @@
       <td>11~16과</td>
       <td>35,000원</td>
     </tr>
-    …… 
+   
     <tr>
       <td>가정용</td>
       <td>5kg</td>
@@ -80,7 +103,13 @@
       <td>47,000원</td>
     </tr>   
   </table>
--->
+
+
+
+
+      </div>
+    </section>
+  </div>
     <script src="main.js"></script>
   </body>
 </html>

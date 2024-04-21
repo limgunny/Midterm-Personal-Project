@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+       .box {
+          background-color: lightgrey;
+          width: 300px;
+          border: 15px solid green;
+          padding: 50px;
+          margin: 20px;
+        }
+        
+.flex-container {
+  display: flex;
+  flex-wrap: nowrap;
+  background-color: DodgerBlue;
+}
+
+.flex-container > div {
+  background-color: #f1f1f1;
+  width: 100px;
+  margin: 10px;
+  text-align: center;
+  line-height: 75px;
+  font-size: 30px;
+}
+
+.item1 { grid-area: header; }
+.item2 { grid-area: menu; }
+.item3 { grid-area: main; }
+.item4 { grid-area: right; }
+.item5 { grid-area: footer; }
+
+.grid-container {
+  display: grid;
+  grid-template-areas:
+    'header header header header header header'
+    'menu main main main right right'
+    'menu footer footer footer footer footer';
+  gap: 10px;
+  background-color: #2196F3;
+  padding: 10px;
+}
+
+.grid-container > div {
+  background-color: rgba(255, 255, 255, 0.8);
+  text-align: center;
+  padding: 20px 0;
+  font-size: 30px;
+}
+
+.expandable-box {
+    background-image: url(img/gungang.jpg);
+            width: 100px;
+            height: 100px;
+            background-color: #3498db;
+            transition: width 0.3s, height 0.3s; /* 애니메이션 효과 설정 */
+        }
+
+        .expandable-box:hover {
+            width: 1000px; /* 너비 확장 */
+            height: 1000px; /* 높이 확장 */
+        }
+        </style>
+</head>
+<body>
+    <!-- 메뉴 -->
+ 
+ <div class="background-image">
+    <nav class="navbar">
+     <div class="container">
+       
+       <div style="margin-left:-25px;" class="logo"><img class="fire" src="img/fire.gif"><a style="margin-left: 15px;" href='/'> Portfolio</a></div>
+       <ul class="nav">
+         <li>
+           <a href='/'>Home</a>
+         </li>
+         <li>
+           <a href='/about.html'>Team</a>
+         </li>
+         <li>
+           <a href='/contact.html'>Contact</a>
+         </li>
+         <li>
+           <a href='/format.html'>visitor</a>
+         </li>
+         <li>
+             <a href='/videos.html'>Videos</a>
+           </li>
+           <li>
+            <a href='/utilize.html'>Utilize</a>
+         </li>
+           <li>
+             <a href='/secon.html'>SECON</a>
+           </li>
+           <li>
+            <a style="font-size: x-small;" href='/signup.html'>회원가입</a>
+          </li>
+           
+       </ul>
+     </div>
+   </nav>
+    <!--메인 섹션-->
+    
+    <h1 style="margin-top: 50px; text-align:center;"><b>박스모델에 대한 설명 및 활용</b></h1><br>
+
+    <p style="margin-left: 35%;">CSS Box 모델은 HTML 요소를 감싸는 박스입니다. </p>
+    
+    <div style="margin-left: 35%;" class="box">이 영역에 있는 텍스트는 Box에 들어갈 내용입니다.padding 50px,margin 20px와 15px의 녹색 border을 추가해 영역을 눈에 보이도록 설정했습니다.</div>
+    <h1 style="margin-top: 50px; text-align:center;"><b>Flex Box Layout의 활용</b></h1><br>
+    <div class="flex-container">
+        <div>1</div>
+        <div>2</div>
+        <div>3</div>  
+        <div>4</div>
+        <div>5</div>
+        <div>6</div>  
+        <div>7</div>
+        <div>8</div>
+        <div>9</div>
+      </div>
+    <h1 style="margin-top: 50px; text-align:center;"><b>Grid Layout의 활용</b></h1><br>
+    <div class="grid-container">
+        <div class="item1">Header</div>
+        <div class="item2">Menu</div>
+        <div class="item3">Main</div>  
+        <div class="item4">Right</div>
+        <div class="item5">Footer</div>
+      </div>
+    <h1 style="margin-top: 50px; text-align:center;"><b>트랜지션, 애니메이션의 활용</b></h1><br>
+    <div class="expandable-box"></div>
+    <h1 style="margin-top: 50px; text-align:center;"><b>반응형 웹 기술 활용</b></h1><br>
+</body>
+</html>

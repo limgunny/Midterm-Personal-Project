@@ -15,47 +15,89 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>포트폴리오</title>
     <link rel="stylesheet" href="style.css" />
+    <style>
+      table {
+          border-collapse: collapse; /* 테두리 겹치기 설정 */
+          width: 100%;
+      }
+      th, td {
+          border: 1px solid black; /* 테두리 선 굵기와 색상 설정 */
+          padding: 8px;
+          text-align: center;
+      }
+  </style>
   </head>
   <body>
-  <!-- 메뉴 -->
-  <nav class="navbar">
-    <div class="container">
-      
-      <div class="logo"><img class="fire" src="img/fire.gif"><a href='/'>\t Portfolio</a></div>
-      <ul class="nav">
-        <li>
-          <a href='/'>Home</a>
-        </li>
-        <li>
-          <a href='/about.html'>About</a>
-        </li>
-        <li>
-          <a href='/contact.html'>Contact</a>
-        </li>
-        <li>
-          <a href='/format.html'>visitor</a>
-        </li>
-        <li>
-            <a href='/videos.html'>Videos</a>
+   <!-- 메뉴 -->
+   <div class="background-image">
+    <nav class="navbar">
+     <div class="container">
+       
+       <div style="margin-left:-25px;" class="logo"><img class="fire" src="img/fire.gif"><a style="margin-left: 15px;" href='/'> Portfolio</a></div>
+       <ul class="nav">
+         <li>
+           <a href='/'>Home</a>
+         </li>
+         <li>
+           <a href='/about.html'>Team</a>
+         </li>
+         <li>
+           <a href='/contact.html'>Contact</a>
+         </li>
+         <li>
+           <a href='/format.html'>visitor</a>
+         </li>
+         <li>
+             <a href='/videos.html'>Videos</a>
+           </li>
+           <li>
+            <a href='/utilize.html'>Utilize</a>
+         </li>
+           <li>
+             <a href='/secon.html'>SECON</a>
+           </li>
+           <li>
+            <a style="font-size: x-small;" href='/signup.html'>회원가입</a>
           </li>
-          <li>
-            <a href='/loading.html'>점검중</a>
-          </li>
-      </ul>
-    </div>
-  </nav>
+           
+       </ul>
+     </div>
+   </nav>
     <!--메인 섹션-->
     <section class="main">
       <div class="container">
-        <h1>About</h1>
-
-        <h3>| 프로필 |</h3><br>
-
-        <img src='img/me.jpg' alt='photo' width="50px"/> <!--알트포토 다음에 WIDTH="400px" 이런식으로 크기 지정 가능-->
-        
-
-        <p>중부대학교 정보보호학과 임건희입니다.</p>
-      </div>
+        <table style="margin-top: 50px;">
+          <h1 style="text-align: center; margin-top: 30px;">팀 구성 및 소개</h1>
+          <tr>
+              <th>이름</th>
+              <th>학번</th>
+              <th>github</th>
+          </tr>
+          <tr>
+              <td>박이슬</td>
+              <td>92450524</td>
+              <td><a href="https://github.com/kindwitch">github 접속하기</a></td>
+              
+          </tr>
+          <tr>
+              <td>유선빈</td>
+              <td>92113724</td>
+              <td><a href="https://github.com/Rickyphantom/web">github 접속하기</a></td>
+              
+          </tr>
+          <tr>
+            <td>임건희</td>
+            <td>91814333</td>
+            <td><a href="https://github.com/limgunny?tab=repositories">github 접속하기</a></td>
+              
+        </tr>
+      </table>
+      <h1 style="text-align: center; margin-top: 50px;">팀 프로젝트 주제 선정</h1>
+      <div style="text-align: center;">어떤 주제의 웹사이트를 만들어야<br> 다양한 HTML CSS의 요소들을 활용하여 웹사이트를 만들 수 있을지 고민해봤고<br>고민 끝에 무언가를 판매하는 웹사이트를 만들면<br> 다양한 HTML CSS의 태그들을 활용하여 웹사이트를 만들 수 있겠다는 생각하에<br> 과일을 판매하는 웹사이트르 주제로 제작하였습니다.</div>
+      <h3 style="text-align: center;margin-top: 70px;">
+      <a href="-https://github.com/limgunny/team">! Team Project</a>
+    </h3> 
+    </div>
     </section>
 
     <script src="main.js"></script>
