@@ -104,7 +104,7 @@ margin-top: auto;
 @media only screen and (max-width: 768px) {
     /* 모바일 화면에서 스타일 변경 */
     .container {
-        width: 90%;
+        width: 110%;
     }
 
     .navbar-toggleBtn {
